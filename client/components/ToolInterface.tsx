@@ -214,103 +214,82 @@ export default function ToolInterface() {
   };
 
   return (
-    <section id="tool" className="py-16 sm:py-24">
+    <section id="tool" className="py-16 sm:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-          <div className="flex-1 rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-semibold text-muted-foreground">
-                Original
-              </h3>
-              <div className="text-xs text-muted-foreground">
-                {wordCount} words • {charCount} chars
+        <div className="mx-auto rounded-2xl bg-white p-6 shadow-lg" style={{ boxShadow: '0 10px 30px rgba(16,24,40,0.06)' }}>
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+            {/* Left panel - Your Text */}
+            <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6" style={{ boxShadow: '0 8px 24px rgba(168,85,247,0.04)' }}>
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-gray-700">Your Text</h3>
+                <div className="text-xs text-gray-500">{wordCount} words • {charCount} chars</div>
               </div>
-            </div>
-            <textarea
-              value={original}
-              onChange={(e) => setOriginal(e.target.value)}
-              rows={18}
-              className="mt-3 w-full resize-y rounded-lg border border-border bg-background/60 p-4 outline-none focus:ring-2 focus:ring-[#8b5cf6]"
-              placeholder="Paste or write your text here…"
-            />
-            <div className="mt-3 flex items-center gap-3">
-              <select
-                value={style}
-                onChange={(e) => setStyle(e.target.value as any)}
-                className="rounded-md border border-border bg-background px-3 py-2 text-sm"
-              >
-                <option value="grammar">Grammar & clarity</option>
-                <option value="formal">Formal tone</option>
-                <option value="friendly">Friendly tone</option>
-                <option value="shorten">Shorten</option>
-                <option value="expand">Expand</option>
-              </select>
 
-              <button
-                onClick={applyStyle}
-                className="inline-flex items-center gap-2 rounded-md bg-brand-gradient px-4 py-2 text-sm font-semibold text-white"
-              >
-                Apply
-              </button>
+              <textarea
+                value={original}
+                onChange={(e) => setOriginal(e.target.value)}
+                rows={16}
+                className="mt-3 w-full resize-y rounded-lg border border-gray-200 bg-white p-4 text-sm outline-none placeholder-gray-400 focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/30 transition"
+                placeholder="Paste or write your text here…"
+              />
 
-              <button
-                onClick={clear}
-                className="ml-auto inline-flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm hover:bg-muted"
-              >
-                <Eraser className="h-4 w-4" /> Clear
-              </button>
-            </div>
-
-            <div className="mt-4">
-              <div className="h-2 w-full rounded-full bg-muted/30">
-                <div
-                  className="h-2 rounded-full bg-brand-gradient transition-all"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-              <div className="mt-2 text-xs text-muted-foreground">
-                Target: 500 words • Progress: {progress}%
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-1 rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-semibold text-muted-foreground">
-                Improved
-              </h3>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={copyImproved}
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm"
+              <div className="mt-3 flex items-center gap-3">
+                <select
+                  value={style}
+                  onChange={(e) => setStyle(e.target.value as any)}
+                  className="rounded-md border border-gray-200 px-3 py-2 text-sm focus:outline-none"
+                  style={{ borderColor: 'rgba(168,85,247,0.4)' }}
                 >
-                  <Copy className="h-4 w-4" /> Copy
+                  <option value="grammar">Grammar & clarity</option>
+                  <option value="formal">Formal tone</option>
+                  <option value="friendly">Friendly tone</option>
+                  <option value="shorten">Shorten</option>
+                  <option value="expand">Expand</option>
+                </select>
+
+                <button onClick={applyStyle} className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white" style={{ backgroundColor: '#8b5cf6' }}>
+                  Apply
                 </button>
-                <button
-                  onClick={downloadTxt}
-                  className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm"
-                >
-                  <Download className="h-4 w-4" /> Download
+
+                <button onClick={clear} className="ml-auto inline-flex items-center gap-2 rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-600">
+                  Clear
                 </button>
               </div>
-            </div>
 
-            <div className="mt-3 min-h-[18rem] rounded-lg border border-dashed border-border bg-background/60 p-4">
-              {improved ? (
-                <div className="prose max-w-none">
-                  <div dangerouslySetInnerHTML={{ __html: improvedHtml }} />
+              <div className="mt-4">
+                <div className="h-2 w-full rounded-full bg-gray-100">
+                  <div className="h-2 rounded-full transition-all" style={{ width: `${progress}%`, background: 'linear-gradient(90deg,#8b5cf6,#a855f7)' }} />
                 </div>
-              ) : (
-                <div className="text-muted-foreground">
-                  Run an improvement to see results here.
-                </div>
-              )}
-            </div>
-
-            <div className="mt-3">
-              <div className="text-xs text-muted-foreground">
-                Changes highlighted: deletions (left) and insertions (right).
+                <div className="mt-2 text-xs text-gray-500">Target: 500 words • Progress: {progress}%</div>
               </div>
+            </div>
+
+            {/* Right panel - Improved Version */}
+            <div className="flex-1 rounded-2xl border p-4 sm:p-6 bg-white" style={{ borderColor: '#a855f7', boxShadow: '0 8px 30px rgba(168,85,247,0.06)' }}>
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-gray-800">Improved Version</h3>
+
+                <div className="flex items-center gap-2">
+                  <button onClick={copyImproved} className="inline-flex items-center gap-2 rounded-md border border-[#8b5cf6] px-3 py-2 text-sm text-[#8b5cf6]">
+                    Copy
+                  </button>
+                  <button onClick={downloadTxt} className="inline-flex items-center gap-2 rounded-md bg-[#8b5cf6] px-3 py-2 text-sm text-white">
+                    Download
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-3 min-h-[18rem] rounded-lg p-4" style={{ border: '1px dashed rgba(168,85,247,0.15)', background: '#fff' }}>
+                {improved ? (
+                  <div className="prose max-w-none text-gray-800">
+                    <div dangerouslySetInnerHTML={{ __html: improvedHtml }} />
+                  </div>
+                ) : (
+                  <div className="text-gray-500">Run an improvement to see results here.</div>
+                )}
+              </div>
+
+              <div className="mt-3 text-xs text-gray-500">Export your improved text or copy to clipboard.</div>
             </div>
           </div>
         </div>
