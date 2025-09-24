@@ -31,7 +31,7 @@ export default function FeaturesGrid() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-transform hover:-translate-y-3 hover:shadow-[0_10px_30px_rgba(139,92,246,0.12)] hover:border-[#8b5cf6]"
+              className="group relative overflow-hidden card p-6 transition-transform hover:-translate-y-3 hover:accent-border"
             >
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#8b5cf6] border border-transparent group-hover:border-[#8b5cf6] transition">
