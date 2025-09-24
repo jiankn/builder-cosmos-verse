@@ -107,7 +107,7 @@ export default function SiteHeader() {
                 <a
                   href="#try"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-4 py-2 text-center text-sm font-semibold text-white"
+                  className="flex-1 rounded-md bg-brand-gradient px-4 py-2 text-center text-sm font-semibold text-white"
                 >
                   Try Free
                 </a>
