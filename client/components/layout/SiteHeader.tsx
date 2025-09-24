@@ -32,8 +32,8 @@ export default function SiteHeader() {
           {/* Left: Logo */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] shadow-md" />
-              <span className="text-lg font-extrabold tracking-tight bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
+              <div className="h-8 w-8 rounded-lg bg-brand-gradient shadow-md" />
+              <span className="text-lg font-extrabold tracking-tight text-brand-gradient">
                 LumenText
               </span>
             </a>
