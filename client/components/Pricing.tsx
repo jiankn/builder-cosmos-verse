@@ -76,7 +76,7 @@ export default function Pricing() {
                 className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-brand-gradient/10 border-transparent" : "bg-card border-border"}`}
               >
                 {p.recommended && (
-                  <div className="absolute -top-3 right-3 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-3 py-1 text-xs font-semibold text-white shadow">
+                  <div className="absolute -top-3 right-3 rounded-full bg-brand-gradient px-3 py-1 text-xs font-semibold text-white shadow">
                     Recommended
                   </div>
                 )}
@@ -134,7 +134,7 @@ export default function Pricing() {
                   ) : (
                     <a
                       href="#signup"
-                      className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white ${p.recommended ? "bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] shadow-lg" : "bg-background border border-border text-foreground"}`}
+                      className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white ${p.recommended ? "bg-brand-gradient shadow-lg" : "bg-background border border-border text-foreground"}`}
                     >
                       {p.recommended ? "Get Pro" : "Get started"}
                     </a>
