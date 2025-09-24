@@ -114,7 +114,7 @@ export default function Pricing() {
                   {featureLabels.map((f, i) => (
                     <li key={f} className="flex items-start gap-3">
                       <span
-                        className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white" : "bg-muted text-muted-foreground"}`}
+                        className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-brand-gradient text-white" : "bg-muted text-muted-foreground"}`}
                       >
                         <Check className="h-4 w-4" />
                       </span>
