@@ -265,7 +265,7 @@ export default function ToolInterface() {
             </div>
 
             {/* Right panel - Improved Version */}
-            <div className="flex-1 rounded-2xl border p-4 sm:p-6 bg-white" style={{ borderColor: '#a855f7', boxShadow: '0 8px 30px rgba(168,85,247,0.06)' }}>
+            <div className="flex-1 card p-4 sm:p-6 accent-border" style={{ borderColor: '#a855f7' }}>
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-gray-800">Improved Version</h3>
 
