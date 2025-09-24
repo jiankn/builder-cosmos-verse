@@ -248,7 +248,7 @@ export default function ToolInterface() {
 
               <button
                 onClick={applyStyle}
-                className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-4 py-2 text-sm font-semibold text-white"
+                className="inline-flex items-center gap-2 rounded-md bg-brand-gradient px-4 py-2 text-sm font-semibold text-white"
               >
                 Apply
               </button>
