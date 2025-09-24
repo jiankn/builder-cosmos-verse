@@ -20,20 +20,14 @@ export default function SiteHeader() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-40 w-full transition-colors ${
-        scrolled
-          ? "backdrop-blur bg-white/60 border-b border-border/70 shadow-sm"
-          : "backdrop-blur bg-white/40"
-      }`}
-    >
+    <header className={`sticky top-0 z-40 w-full bg-white ${scrolled ? "shadow-sm" : "shadow-sm"}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           {/* Left: Logo */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-lg bg-brand-gradient shadow-md" />
-              <span className="text-lg font-extrabold tracking-tight text-brand-gradient">
+              <div className="h-8 w-8 rounded-lg bg-[#1f2937]" />
+              <span className="text-lg font-extrabold tracking-tight" style={{ color: "#1f2937" }}>
                 LumenText
               </span>
             </a>
@@ -45,7 +39,8 @@ export default function SiteHeader() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm"
+                style={{ color: "#6b7280" }}
               >
                 {item.label}
               </a>
@@ -57,13 +52,15 @@ export default function SiteHeader() {
             <div className="hidden md:flex items-center gap-3">
               <a
                 href="#login"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="rounded-md px-4 py-2 text-sm font-medium"
+                style={{ color: "#8b5cf6", border: "1.5px solid #8b5cf6" }}
               >
                 Login
               </a>
               <a
                 href="#try"
-                className="inline-flex items-center rounded-md bg-brand-gradient px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-95"
+                className="inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-white"
+                style={{ backgroundColor: "#8b5cf6" }}
               >
                 Try Free
               </a>
@@ -83,14 +80,15 @@ export default function SiteHeader() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden">
-          <div className="w-full border-t border-border bg-white/60 backdrop-blur py-3">
+          <div className="w-full border-t border-border bg-white py-3">
             <div className="mx-auto max-w-7xl px-4 flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="py-2 text-foreground/80"
+                  className="py-2"
+                  style={{ color: "#1f2937" }}
                 >
                   {item.label}
                 </a>
@@ -100,14 +98,16 @@ export default function SiteHeader() {
                 <a
                   href="#login"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md px-4 py-2 text-center text-sm font-medium text-muted-foreground border border-border bg-background/50"
+                  className="flex-1 rounded-md px-4 py-2 text-center text-sm font-medium"
+                  style={{ color: "#8b5cf6", border: "1.5px solid #8b5cf6" }}
                 >
                   Login
                 </a>
                 <a
                   href="#try"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md bg-brand-gradient px-4 py-2 text-center text-sm font-semibold text-white"
+                  className="flex-1 rounded-md px-4 py-2 text-center text-sm font-semibold text-white"
+                  style={{ backgroundColor: "#8b5cf6" }}
                 >
                   Try Free
                 </a>
