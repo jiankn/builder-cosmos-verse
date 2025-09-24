@@ -42,6 +42,12 @@
 
     --radius: 0.5rem;
 
+    /* Brand colors (HSL) */
+    --brand: 239 84% 66%; /* #6366f1 */
+    --brand-foreground: 0 0% 100%;
+    --brand-start: 239 84% 66%;
+    --brand-end: 258 90% 67%; /* #8b5cf6 */
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
