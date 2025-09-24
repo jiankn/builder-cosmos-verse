@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -9,6 +9,10 @@ export default function Hero() {
     const t = setTimeout(() => setMounted(true), 80);
     return () => clearTimeout(t);
   }, []);
+
+  const headingClasses = `mx-auto text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight transition-all duration-500 ${
+    mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+  }`;
 
   return (
     <section
@@ -21,13 +25,7 @@ export default function Hero() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center text-white">
-          <h1
-            className={`mx-auto text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight ${
-              mounted ? "opacity-100" : "opacity-0 translate-y-3"
-            } transition-all duration-500`
-          >
-            Transform Your Writing with Advanced AI
-          </h1>
+          <h1 className={headingClasses}>Transform Your Writing with Advanced AI</h1>
 
           <p className="mt-4 text-base sm:text-lg text-gray-200 mx-auto max-w-2xl">
             Improve clarity, correct grammar, and refine your tone instantly with smart, context-aware suggestions.
