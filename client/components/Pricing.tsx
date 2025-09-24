@@ -135,7 +135,7 @@ export default function Pricing() {
                   ) : (
                     <a
                       href="#signup"
-                      className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold ${p.recommended ? "text-white bg-[#8b5cf6] shadow-lg" : "text-[#8b5cf6] bg-transparent border border-[#8b5cf6]"}`}
+                      className={`w-full ${p.recommended ? "btn-primary" : "btn-secondary"}`}
                     >
                       {p.recommended ? "Get Pro" : "Get started"}
                     </a>
