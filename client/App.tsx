@@ -30,4 +30,13 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Ensure we only create one root (works with HMR). Reuse existing root if present.
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  const globalKey = "__lumentext_root__" as any;
+  const win = window as any;
+  if (!win[globalKey]) {
+    win[globalKey] = createRoot(rootElement);
+  }
+  win[globalKey].render(<App />);
+}
