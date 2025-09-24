@@ -18,6 +18,12 @@
     --primary-hex: #8b5cf6;
     --secondary-hex: #7c3aed;
     --accent-hex: #a855f7;
+
+    /* Typography colors */
+    --heading-color: #1f2937; /* dark gray */
+    --body-color: #6b7280; /* medium gray */
+    --caption-color: #9ca3af; /* light gray */
+    --link-color: #8b5cf6; /* purple */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
