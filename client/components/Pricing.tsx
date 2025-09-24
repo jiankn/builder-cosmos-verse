@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useState } from "react";
 import { Check, Mail, Star } from "lucide-react";
 
 const plans = [
