@@ -1,35 +1,20 @@
-import { ShieldCheck, Bot, CheckCircle2, Sparkles, Languages, Wand2 } from "lucide-react";
+import { BarChart2, Palette, Activity } from "lucide-react";
 
 const features = [
   {
-    icon: Wand2,
-    title: "Smart rewrites",
-    desc: "Fix grammar and clarity with intelligent suggestions.",
+    icon: BarChart2,
+    title: "Advanced Analysis",
+    desc: "Deep linguistic analysis that surfaces readability, redundancy, and clarity issues so you can improve precisely.",
   },
   {
-    icon: Sparkles,
-    title: "Tone control",
-    desc: "Switch between friendly, neutral, and formal instantly.",
+    icon: Palette,
+    title: "Multiple Styles",
+    desc: "Switch between formal, friendly, concise, or expanded styles to match your audience and purpose.",
   },
   {
-    icon: Languages,
-    title: "Multilingual",
-    desc: "Great results for English and many other languages.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Private by design",
-    desc: "Your text stays on-device in this demo. No servers.",
-  },
-  {
-    icon: Bot,
-    title: "AI powered",
-    desc: "Built to plug into your preferred AI provider.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Fast workflow",
-    desc: "Keyboard-first actions and clean UI for speed.",
+    icon: Activity,
+    title: "Quality Metrics",
+    desc: "Track improvements with automated quality scores, change history, and actionable suggestions.",
   },
 ];
 
@@ -41,14 +26,25 @@ export default function FeaturesGrid() {
           <h2 className="text-3xl sm:text-4xl font-bold">Everything you need to write well</h2>
           <p className="mt-3 text-muted-foreground">Designed for clarity, built for speed, and ready for production.</p>
         </div>
+
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
-            <div key={f.title} className="rounded-xl border border-border bg-card p-5 shadow-sm">
-              <div className="h-10 w-10 rounded-md bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white inline-flex items-center justify-center">
-                <f.icon className="h-5 w-5" />
+            <div
+              key={f.title}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-transform hover:-translate-y-2 hover:shadow-lg hover:border-transparent"
+              aria-hidden={false}
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white shadow-md transition-opacity group-hover:opacity-95">
+                  <f.icon className="h-6 w-6" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold">{f.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+                </div>
               </div>
-              <h3 className="mt-4 text-lg font-semibold">{f.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{f.desc}</p>
+
+              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 transition-opacity group-hover:opacity-100" />
             </div>
           ))}
         </div>
