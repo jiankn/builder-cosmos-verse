@@ -270,10 +270,10 @@ export default function ToolInterface() {
                 <h3 className="text-sm font-semibold text-gray-800">Improved Version</h3>
 
                 <div className="flex items-center gap-2">
-                  <button onClick={copyImproved} className="inline-flex items-center gap-2 rounded-md border border-[#8b5cf6] px-3 py-2 text-sm text-[#8b5cf6]">
+                  <button onClick={copyImproved} className="btn-secondary">
                     Copy
                   </button>
-                  <button onClick={downloadTxt} className="inline-flex items-center gap-2 rounded-md bg-[#8b5cf6] px-3 py-2 text-sm text-white">
+                  <button onClick={downloadTxt} className="btn-primary">
                     Download
                   </button>
                 </div>
