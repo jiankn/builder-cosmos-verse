@@ -73,7 +73,7 @@ export default function Pricing() {
             return (
               <div
                 key={p.key}
-                className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-gradient-to-br from-[#6366f1]/10 to-[#8b5cf6]/10 border-transparent" : "bg-card border-border"}`}
+                className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-brand-gradient/10 border-transparent" : "bg-card border-border"}`}
               >
                 {p.recommended && (
                   <div className="absolute -top-3 right-3 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-3 py-1 text-xs font-semibold text-white shadow">
