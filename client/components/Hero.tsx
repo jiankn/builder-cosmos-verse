@@ -62,7 +62,7 @@ export default function Hero() {
 
             <div className="mt-4 flex flex-col gap-3 sm:flex-row items-center justify-between">
               <div className="flex gap-3">
-                <button className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-5 py-3 text-sm font-semibold text-white shadow-lg transform active:scale-95 transition-transform">
+                <button className="inline-flex items-center gap-2 rounded-md bg-brand-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg transform active:scale-95 transition-transform">
                   Improve text <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
 
