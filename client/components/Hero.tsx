@@ -31,7 +31,7 @@ export default function Hero() {
             Improve clarity, correct grammar, and refine your tone instantly with smart, context-aware suggestions.
           </p>
 
-          <div className="mt-8">
+          <div className="mt-8 card p-5">
             <label htmlFor="hero-text" className="sr-only">
               Enter your text
             </label>
@@ -41,7 +41,7 @@ export default function Hero() {
               onChange={(e) => setText(e.target.value)}
               placeholder="Paste your paragraph here…"
               rows={6}
-              className="w-full rounded-2xl bg-white p-5 text-gray-900 placeholder-gray-400 shadow-sm border border-transparent focus:outline-none transition focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/40"
+              className="w-full rounded-12 bg-white p-5 text-gray-900 placeholder-gray-400 shadow-sm border border-transparent focus:outline-none transition focus:border-[#8b5cf6] focus:ring-2 focus:ring-[#8b5cf6]/40"
             />
 
             <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
