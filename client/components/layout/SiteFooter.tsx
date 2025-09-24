@@ -99,10 +99,7 @@ export default function SiteFooter() {
                 placeholder="Your email"
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8b5cf6]/40"
               />
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 rounded-md bg-[#8b5cf6] px-4 py-2 text-sm font-semibold text-white hover:opacity-95"
-              >
+              <button type="submit" className="btn-primary">
                 {submitted ? "Thanks!" : "Subscribe"}
               </button>
             </form>
