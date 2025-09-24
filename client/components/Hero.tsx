@@ -45,18 +45,12 @@ export default function Hero() {
             />
 
             <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                className="inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold text-white shadow-md"
-                style={{ backgroundColor: "#8b5cf6" }}
-              >
+              <button className="btn-primary">
                 Improve Text Quality
                 <ArrowRight className="ml-2 h-4 w-4 text-white" />
               </button>
 
-              <button
-                className="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white bg-transparent border border-white/60 hover:bg-white/10 transition"
-                aria-label="Check Writing Style"
-              >
+              <button className="btn-secondary" aria-label="Check Writing Style">
                 Check Writing Style
               </button>
             </div>
