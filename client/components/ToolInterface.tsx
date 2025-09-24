@@ -219,7 +219,7 @@ export default function ToolInterface() {
         <div className="mx-auto rounded-2xl bg-white p-6 shadow-lg" style={{ boxShadow: '0 10px 30px rgba(16,24,40,0.06)' }}>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
             {/* Left panel - Your Text */}
-            <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6" style={{ boxShadow: '0 8px 24px rgba(168,85,247,0.04)' }}>
+            <div className="flex-1 card p-4 sm:p-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-gray-700">Your Text</h3>
                 <div className="text-xs text-gray-500">{wordCount} words • {charCount} chars</div>
