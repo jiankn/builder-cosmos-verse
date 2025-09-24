@@ -83,22 +83,8 @@ export default function SiteHeader() {
               ))}
 
               <div className="mt-2 flex gap-2">
-                <a
-                  href="#login"
-                  onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md px-4 py-2 text-center text-sm font-medium"
-                  style={{ color: "#8b5cf6", border: "1.5px solid #8b5cf6" }}
-                >
-                  Login
-                </a>
-                <a
-                  href="#try"
-                  onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md px-4 py-2 text-center text-sm font-semibold text-white"
-                  style={{ backgroundColor: "#8b5cf6" }}
-                >
-                  Try Free
-                </a>
+                <a href="#login" onClick={() => setOpen(false)} className="flex-1 btn-secondary text-sm text-center">Login</a>
+                <a href="#try" onClick={() => setOpen(false)} className="flex-1 btn-primary text-sm text-center">Try Free</a>
               </div>
             </div>
           </div>
