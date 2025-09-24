@@ -143,6 +143,30 @@
     color: #7c3aed;
     border-color: #7c3aed;
   }
+
+  /* Card and layout utilities */
+  .card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb; /* subtle gray */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(139,92,246,0.12);
+  }
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(139,92,246,0.12);
+  }
+  .rounded-12 {
+    border-radius: 12px;
+  }
+  .border-subtle {
+    border: 1px solid #e5e7eb;
+  }
+  .shadow-soft {
+    box-shadow: 0 8px 24px rgba(139,92,246,0.12);
+  }
+  .accent-border {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 8px 30px rgba(139,92,246,0.08);
+  }
 }
 
 @layer base {
