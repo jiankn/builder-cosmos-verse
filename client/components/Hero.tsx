@@ -72,7 +72,7 @@ export default function Hero() {
               </div>
 
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Users className="h-5 w-5 text-[#6366f1]" />
+                <Users className="h-5 w-5" style={{ color: "var(--primary-hex)" }} />
                 <div className="leading-4">
                   <div className="text-foreground font-semibold">
                     350k+ users
