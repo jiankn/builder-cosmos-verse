@@ -39,7 +39,7 @@ export default function FeaturesGrid() {
               aria-hidden={false}
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white shadow-md transition-opacity group-hover:opacity-95">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-gradient text-white shadow-md transition-opacity group-hover:opacity-95">
                   <f.icon className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
