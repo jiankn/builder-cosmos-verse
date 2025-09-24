@@ -247,11 +247,11 @@ export default function ToolInterface() {
                   <option value="expand">Expand</option>
                 </select>
 
-                <button onClick={applyStyle} className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white" style={{ backgroundColor: '#8b5cf6' }}>
+                <button onClick={applyStyle} className="btn-primary">
                   Apply
                 </button>
 
-                <button onClick={clear} className="ml-auto inline-flex items-center gap-2 rounded-md border border-gray-200 px-3 py-2 text-sm text-gray-600">
+                <button onClick={clear} className="ml-auto btn-secondary">
                   Clear
                 </button>
               </div>
