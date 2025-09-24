@@ -18,8 +18,8 @@ export default function Hero() {
     >
       {/* Background blobs */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-[#6366f1] to-[#8b5cf6] opacity-20 blur-3xl" />
-        <div className="absolute -bottom-48 -right-32 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#6366f1] opacity-20 blur-3xl" />
+        <div className="absolute -top-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-brand-gradient opacity-20 blur-3xl" />
+        <div className="absolute -bottom-48 -right-32 h-[28rem] w-[28rem] rounded-full bg-brand-gradient opacity-20 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
