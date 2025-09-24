@@ -45,7 +45,9 @@ export default function Pricing() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">Simple pricing</h2>
-          <p className="mt-3 text-muted-foreground">Start free. Upgrade when you need more power.</p>
+          <p className="mt-3 text-muted-foreground">
+            Start free. Upgrade when you need more power.
+          </p>
 
           <div className="mt-6 inline-flex items-center space-x-1 rounded-full bg-muted/10 p-1">
             <button
@@ -74,21 +76,35 @@ export default function Pricing() {
                 className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-gradient-to-br from-[#6366f1]/10 to-[#8b5cf6]/10 border-transparent" : "bg-card border-border"}`}
               >
                 {p.recommended && (
-                  <div className="absolute -top-3 right-3 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-3 py-1 text-xs font-semibold text-white shadow">Recommended</div>
+                  <div className="absolute -top-3 right-3 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-3 py-1 text-xs font-semibold text-white shadow">
+                    Recommended
+                  </div>
                 )}
 
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-lg font-semibold">{p.name}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {p.desc}
+                    </p>
                   </div>
                   <div className="text-right">
                     {isEnterprise ? (
-                      <div className="text-sm text-muted-foreground">Contact us</div>
+                      <div className="text-sm text-muted-foreground">
+                        Contact us
+                      </div>
                     ) : (
                       <div>
-                        <div className="text-3xl font-extrabold">{price === 0 ? "$0" : `$${price}`}</div>
-                        <div className="text-sm text-muted-foreground">{price === 0 ? "/ forever" : billing === "monthly" ? "/ month" : "/ year"}</div>
+                        <div className="text-3xl font-extrabold">
+                          {price === 0 ? "$0" : `$${price}`}
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          {price === 0
+                            ? "/ forever"
+                            : billing === "monthly"
+                              ? "/ month"
+                              : "/ year"}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -97,7 +113,9 @@ export default function Pricing() {
                 <ul className="mt-6 space-y-3 text-sm">
                   {featureLabels.map((f, i) => (
                     <li key={f} className="flex items-start gap-3">
-                      <span className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white" : "bg-muted text-muted-foreground"}`}>
+                      <span
+                        className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] text-white" : "bg-muted text-muted-foreground"}`}
+                      >
                         <Check className="h-4 w-4" />
                       </span>
                       <span className="text-sm text-foreground">{f}</span>
@@ -107,7 +125,10 @@ export default function Pricing() {
 
                 <div className="mt-6">
                   {isEnterprise ? (
-                    <a href="#contact" className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold hover:bg-muted">
+                    <a
+                      href="#contact"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold hover:bg-muted"
+                    >
                       <Mail className="h-4 w-4" /> Contact sales
                     </a>
                   ) : (
@@ -120,12 +141,13 @@ export default function Pricing() {
                   )}
                 </div>
 
-                <div className="mt-4 text-xs text-muted-foreground">No credit card required to start.</div>
+                <div className="mt-4 text-xs text-muted-foreground">
+                  No credit card required to start.
+                </div>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );

@@ -11,7 +11,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="product" className="relative overflow-hidden py-20 sm:py-28" aria-label="Hero">
+    <section
+      id="product"
+      className="relative overflow-hidden py-20 sm:py-28"
+      aria-label="Hero"
+    >
       {/* Background blobs */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-[#6366f1] to-[#8b5cf6] opacity-20 blur-3xl" />
@@ -20,21 +24,32 @@ export default function Hero() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className={`mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-3 py-1 text-xs font-medium text-foreground/80 shadow-sm backdrop-blur transition-opacity duration-600 ${mounted ? "opacity-100" : "opacity-0 translate-y-2"}`}>
+          <div
+            className={`mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-3 py-1 text-xs font-medium text-foreground/80 shadow-sm backdrop-blur transition-opacity duration-600 ${mounted ? "opacity-100" : "opacity-0 translate-y-2"}`}
+          >
             ✨ Modern AI writing assistant
           </div>
 
-          <h1 className={`mx-auto text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <h1
+            className={`mx-auto text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          >
             Transform Your Writing with Advanced AI
           </h1>
 
-          <p className={`mt-4 text-base sm:text-lg text-muted-foreground transition-opacity duration-700 ${mounted ? "opacity-100" : "opacity-0"}`}>
-            Improve clarity, fix grammar, and refine tone in seconds — powered by smart suggestions and clear explanations.
+          <p
+            className={`mt-4 text-base sm:text-lg text-muted-foreground transition-opacity duration-700 ${mounted ? "opacity-100" : "opacity-0"}`}
+          >
+            Improve clarity, fix grammar, and refine tone in seconds — powered
+            by smart suggestions and clear explanations.
           </p>
 
           {/* Large text area */}
-          <div className={`mt-8 rounded-2xl border border-border bg-white/60 p-2 shadow-sm backdrop-blur transition-transform duration-500 ${mounted ? "scale-100" : "scale-98 opacity-80"}`}>
-            <label htmlFor="hero-text" className="sr-only">Enter your text</label>
+          <div
+            className={`mt-8 rounded-2xl border border-border bg-white/60 p-2 shadow-sm backdrop-blur transition-transform duration-500 ${mounted ? "scale-100" : "scale-98 opacity-80"}`}
+          >
+            <label htmlFor="hero-text" className="sr-only">
+              Enter your text
+            </label>
             <textarea
               id="hero-text"
               value={text}
@@ -59,13 +74,17 @@ export default function Hero() {
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Users className="h-5 w-5 text-[#6366f1]" />
                 <div className="leading-4">
-                  <div className="text-foreground font-semibold">350k+ users</div>
+                  <div className="text-foreground font-semibold">
+                    350k+ users
+                  </div>
                   <div className="text-xs">Trusted by teams worldwide</div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-3 text-xs text-muted-foreground">We respect your privacy — this demo runs locally in your browser.</div>
+            <div className="mt-3 text-xs text-muted-foreground">
+              We respect your privacy — this demo runs locally in your browser.
+            </div>
           </div>
         </div>
       </div>

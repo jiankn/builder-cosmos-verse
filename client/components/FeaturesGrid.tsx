@@ -23,8 +23,12 @@ export default function FeaturesGrid() {
     <section id="features" className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Everything you need to write well</h2>
-          <p className="mt-3 text-muted-foreground">Designed for clarity, built for speed, and ready for production.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Everything you need to write well
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Designed for clarity, built for speed, and ready for production.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

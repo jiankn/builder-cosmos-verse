@@ -5,10 +5,13 @@ export default function SiteFooter() {
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <div className="h-7 w-7 rounded-md bg-gradient-to-br from-[#6366f1] to-[#8b5cf6]" />
-            <span className="text-base font-extrabold tracking-tight">LumenText</span>
+            <span className="text-base font-extrabold tracking-tight">
+              LumenText
+            </span>
           </div>
           <p className="text-sm text-muted-foreground max-w-xs">
-            Write clearly and confidently. Improve tone, fix grammar, and refine your message instantly.
+            Write clearly and confidently. Improve tone, fix grammar, and refine
+            your message instantly.
           </p>
         </div>
         <div className="text-sm text-muted-foreground space-y-2">
@@ -16,9 +19,24 @@ export default function SiteFooter() {
           <p>All rights reserved.</p>
         </div>
         <div className="flex gap-4 md:justify-end">
-          <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground">Pricing</a>
-          <a href="#features" className="text-sm text-muted-foreground hover:text-foreground">Features</a>
-          <a href="#tool" className="text-sm text-muted-foreground hover:text-foreground">Try it</a>
+          <a
+            href="#pricing"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Pricing
+          </a>
+          <a
+            href="#features"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Features
+          </a>
+          <a
+            href="#tool"
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
+            Try it
+          </a>
         </div>
       </div>
     </footer>
