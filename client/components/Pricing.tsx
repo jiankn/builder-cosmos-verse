@@ -126,9 +126,6 @@ export default function Pricing() {
           })}
         </div>
 
-        <div className="mt-8 mx-auto max-w-3xl text-center text-sm text-muted-foreground">
-          <span className="inline-flex items-center gap-2"> <Star className="h-4 w-4 text-yellow-400" /> 14-day money-back guarantee on paid plans</span>
-        </div>
       </div>
     </section>
   );
