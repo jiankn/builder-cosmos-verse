@@ -101,6 +101,11 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Brand */
+    --brand: 239 84% 66%;
+    --brand-foreground: 0 0% 100%;
+    --brand-start: 239 84% 66%;
+    --brand-end: 258 90% 67%;
   }
 }
 
