@@ -264,7 +264,7 @@ export default function ToolInterface() {
             <div className="mt-4">
               <div className="h-2 w-full rounded-full bg-muted/30">
                 <div
-                  className="h-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] transition-all"
+                  className="h-2 rounded-full bg-brand-gradient transition-all"
                   style={{ width: `${progress}%` }}
                 />
               </div>
