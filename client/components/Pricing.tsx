@@ -74,32 +74,32 @@ export default function Pricing() {
             return (
               <div
                 key={p.key}
-                className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-brand-gradient/10 border-transparent" : "bg-card border-border"}`}
+                className={`relative rounded-2xl border p-6 shadow-sm transition-transform hover:-translate-y-2 ${p.recommended ? "bg-white border-[#8b5cf6] ring-1 ring-[#8b5cf6] shadow-lg" : "bg-white border-gray-200"}`}
               >
                 {p.recommended && (
-                  <div className="absolute -top-3 right-3 rounded-full bg-brand-gradient px-3 py-1 text-xs font-semibold text-white shadow">
+                  <div className="absolute -top-3 right-3 rounded-full bg-[#8b5cf6] px-3 py-1 text-xs font-semibold text-white shadow">
                     Recommended
                   </div>
                 )}
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold">{p.name}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
+                    <h3 className="text-lg font-semibold" style={{ color: '#1f2937' }}>{p.name}</h3>
+                    <p className="mt-1 text-sm" style={{ color: '#6b7280' }}>
                       {p.desc}
                     </p>
                   </div>
                   <div className="text-right">
                     {isEnterprise ? (
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm" style={{ color: '#6b7280' }}>
                         Contact us
                       </div>
                     ) : (
                       <div>
-                        <div className="text-3xl font-extrabold">
+                        <div className="text-3xl font-extrabold" style={{ color: '#1f2937' }}>
                           {price === 0 ? "$0" : `$${price}`}
                         </div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-sm" style={{ color: '#6b7280' }}>
                           {price === 0
                             ? "/ forever"
                             : billing === "monthly"
@@ -115,11 +115,11 @@ export default function Pricing() {
                   {featureLabels.map((f, i) => (
                     <li key={f} className="flex items-start gap-3">
                       <span
-                        className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-brand-gradient text-white" : "bg-muted text-muted-foreground"}`}
+                        className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-md ${p.features[i] ? "bg-[#8b5cf6] text-white" : "bg-gray-100 text-gray-400"}`}
                       >
                         <Check className="h-4 w-4" />
                       </span>
-                      <span className="text-sm text-foreground">{f}</span>
+                      <span className="text-sm" style={{ color: '#6b7280' }}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -135,14 +135,14 @@ export default function Pricing() {
                   ) : (
                     <a
                       href="#signup"
-                      className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white ${p.recommended ? "bg-brand-gradient shadow-lg" : "bg-background border border-border text-foreground"}`}
+                      className={`inline-flex w-full items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold ${p.recommended ? "text-white bg-[#8b5cf6] shadow-lg" : "text-[#8b5cf6] bg-transparent border border-[#8b5cf6]"}`}
                     >
                       {p.recommended ? "Get Pro" : "Get started"}
                     </a>
                   )}
                 </div>
 
-                <div className="mt-4 text-xs text-muted-foreground">
+                <div className="mt-4 text-xs" style={{ color: '#6b7280' }}>
                   No credit card required to start.
                 </div>
               </div>
