@@ -20,23 +20,40 @@ export default function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-md bg-white/5 flex items-center justify-center text-[#8b5cf6]">LT</div>
+              <div className="h-10 w-10 rounded-md bg-white/5 flex items-center justify-center text-[#8b5cf6]">
+                LT
+              </div>
               <div>
                 <div className="font-extrabold text-white">LumenText</div>
-                <div className="text-sm text-white/80">Write clearly. Ship confidently.</div>
+                <div className="text-sm text-white/80">
+                  Write clearly. Ship confidently.
+                </div>
               </div>
             </div>
             <p className="text-sm text-white/70 max-w-xs">
-              Improve clarity, tone, and grammar with intelligent suggestions — trusted by writers worldwide.
+              Improve clarity, tone, and grammar with intelligent suggestions —
+              trusted by writers worldwide.
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" className="text-[#8b5cf6] hover:opacity-90" aria-label="Twitter">
+              <a
+                href="#"
+                className="text-[#8b5cf6] hover:opacity-90"
+                aria-label="Twitter"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#8b5cf6] hover:opacity-90" aria-label="Github">
+              <a
+                href="#"
+                className="text-[#8b5cf6] hover:opacity-90"
+                aria-label="Github"
+              >
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#8b5cf6] hover:opacity-90" aria-label="LinkedIn">
+              <a
+                href="#"
+                className="text-[#8b5cf6] hover:opacity-90"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -46,16 +63,30 @@ export default function SiteFooter() {
             <h4 className="text-sm font-semibold text-white">Product</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a href="#product" className="text-white/80 hover:text-[#8b5cf6]">Features</a>
+                <a
+                  href="#product"
+                  className="text-white/80 hover:text-[#8b5cf6]"
+                >
+                  Features
+                </a>
               </li>
               <li>
-                <a href="#pricing" className="text-white/80 hover:text-[#8b5cf6]">Pricing</a>
+                <a
+                  href="#pricing"
+                  className="text-white/80 hover:text-[#8b5cf6]"
+                >
+                  Pricing
+                </a>
               </li>
               <li>
-                <a href="#api" className="text-white/80 hover:text-[#8b5cf6]">API</a>
+                <a href="#api" className="text-white/80 hover:text-[#8b5cf6]">
+                  API
+                </a>
               </li>
               <li>
-                <a href="#blog" className="text-white/80 hover:text-[#8b5cf6]">Blog</a>
+                <a href="#blog" className="text-white/80 hover:text-[#8b5cf6]">
+                  Blog
+                </a>
               </li>
             </ul>
           </div>
@@ -64,16 +95,33 @@ export default function SiteFooter() {
             <h4 className="text-sm font-semibold text-white">Resources</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a href="#docs" className="text-white/80 hover:text-[#8b5cf6]">Docs</a>
+                <a href="#docs" className="text-white/80 hover:text-[#8b5cf6]">
+                  Docs
+                </a>
               </li>
               <li>
-                <a href="#support" className="text-white/80 hover:text-[#8b5cf6]">Support</a>
+                <a
+                  href="#support"
+                  className="text-white/80 hover:text-[#8b5cf6]"
+                >
+                  Support
+                </a>
               </li>
               <li>
-                <a href="#guides" className="text-white/80 hover:text-[#8b5cf6]">Guides</a>
+                <a
+                  href="#guides"
+                  className="text-white/80 hover:text-[#8b5cf6]"
+                >
+                  Guides
+                </a>
               </li>
               <li>
-                <a href="#status" className="text-white/80 hover:text-[#8b5cf6]">Status</a>
+                <a
+                  href="#status"
+                  className="text-white/80 hover:text-[#8b5cf6]"
+                >
+                  Status
+                </a>
               </li>
             </ul>
           </div>
@@ -83,14 +131,21 @@ export default function SiteFooter() {
             <div className="mt-4 text-sm text-white/80 space-y-2">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-white/80" />
-                <a href="mailto:hello@lumentext.com" className="hover:text-[#8b5cf6]">hello@lumentext.com</a>
+                <a
+                  href="mailto:hello@lumentext.com"
+                  className="hover:text-[#8b5cf6]"
+                >
+                  hello@lumentext.com
+                </a>
               </div>
               <div>123 Startup Ave, Suite 100</div>
               <div>San Francisco, CA</div>
             </div>
 
             <form onSubmit={submit} className="mt-6 flex gap-2">
-              <label htmlFor="newsletter" className="sr-only">Email address</label>
+              <label htmlFor="newsletter" className="sr-only">
+                Email address
+              </label>
               <input
                 id="newsletter"
                 type="email"
@@ -108,11 +163,17 @@ export default function SiteFooter() {
 
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-white/70">
           <div className="flex items-center gap-4">
-            <a href="#privacy" className="hover:text-[#8b5cf6]">Privacy Policy</a>
-            <a href="#terms" className="hover:text-[#8b5cf6]">Terms</a>
+            <a href="#privacy" className="hover:text-[#8b5cf6]">
+              Privacy Policy
+            </a>
+            <a href="#terms" className="hover:text-[#8b5cf6]">
+              Terms
+            </a>
           </div>
 
-          <div className="mt-3 md:mt-0">© {new Date().getFullYear()} LumenText Inc. All rights reserved.</div>
+          <div className="mt-3 md:mt-0">
+            © {new Date().getFullYear()} LumenText Inc. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

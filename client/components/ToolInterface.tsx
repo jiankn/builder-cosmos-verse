@@ -216,13 +216,20 @@ export default function ToolInterface() {
   return (
     <section id="tool" className="py-16 sm:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto rounded-2xl bg-white p-6 shadow-lg" style={{ boxShadow: '0 10px 30px rgba(16,24,40,0.06)' }}>
+        <div
+          className="mx-auto rounded-2xl bg-white p-6 shadow-lg"
+          style={{ boxShadow: "0 10px 30px rgba(16,24,40,0.06)" }}
+        >
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
             {/* Left panel - Your Text */}
             <div className="flex-1 card p-4 sm:p-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-gray-700">Your Text</h3>
-                <div className="text-xs text-gray-500">{wordCount} words • {charCount} chars</div>
+                <h3 className="text-sm font-semibold text-gray-700">
+                  Your Text
+                </h3>
+                <div className="text-xs text-gray-500">
+                  {wordCount} words • {charCount} chars
+                </div>
               </div>
 
               <textarea
@@ -238,7 +245,7 @@ export default function ToolInterface() {
                   value={style}
                   onChange={(e) => setStyle(e.target.value as any)}
                   className="rounded-md border border-gray-200 px-3 py-2 text-sm focus:outline-none"
-                  style={{ borderColor: 'rgba(168,85,247,0.4)' }}
+                  style={{ borderColor: "rgba(168,85,247,0.4)" }}
                 >
                   <option value="grammar">Grammar & clarity</option>
                   <option value="formal">Formal tone</option>
@@ -258,16 +265,29 @@ export default function ToolInterface() {
 
               <div className="mt-4">
                 <div className="h-2 w-full rounded-full bg-gray-100">
-                  <div className="h-2 rounded-full transition-all" style={{ width: `${progress}%`, background: 'linear-gradient(90deg,#8b5cf6,#a855f7)' }} />
+                  <div
+                    className="h-2 rounded-full transition-all"
+                    style={{
+                      width: `${progress}%`,
+                      background: "linear-gradient(90deg,#8b5cf6,#a855f7)",
+                    }}
+                  />
                 </div>
-                <div className="mt-2 text-xs text-gray-500">Target: 500 words • Progress: {progress}%</div>
+                <div className="mt-2 text-xs text-gray-500">
+                  Target: 500 words • Progress: {progress}%
+                </div>
               </div>
             </div>
 
             {/* Right panel - Improved Version */}
-            <div className="flex-1 card p-4 sm:p-6 accent-border" style={{ borderColor: '#a855f7' }}>
+            <div
+              className="flex-1 card p-4 sm:p-6 accent-border"
+              style={{ borderColor: "#a855f7" }}
+            >
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-gray-800">Improved Version</h3>
+                <h3 className="text-sm font-semibold text-gray-800">
+                  Improved Version
+                </h3>
 
                 <div className="flex items-center gap-2">
                   <button onClick={copyImproved} className="btn-secondary">
@@ -279,17 +299,27 @@ export default function ToolInterface() {
                 </div>
               </div>
 
-              <div className="mt-3 min-h-[18rem] rounded-lg p-4" style={{ border: '1px dashed rgba(168,85,247,0.15)', background: '#fff' }}>
+              <div
+                className="mt-3 min-h-[18rem] rounded-lg p-4"
+                style={{
+                  border: "1px dashed rgba(168,85,247,0.15)",
+                  background: "#fff",
+                }}
+              >
                 {improved ? (
                   <div className="prose max-w-none text-gray-800">
                     <div dangerouslySetInnerHTML={{ __html: improvedHtml }} />
                   </div>
                 ) : (
-                  <div className="text-gray-500">Run an improvement to see results here.</div>
+                  <div className="text-gray-500">
+                    Run an improvement to see results here.
+                  </div>
                 )}
               </div>
 
-              <div className="mt-3 text-xs text-gray-500">Export your improved text or copy to clipboard.</div>
+              <div className="mt-3 text-xs text-gray-500">
+                Export your improved text or copy to clipboard.
+              </div>
             </div>
           </div>
         </div>

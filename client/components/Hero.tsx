@@ -25,10 +25,13 @@ export default function Hero() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center text-white">
-          <h1 className={headingClasses}>Transform Your Writing with Advanced AI</h1>
+          <h1 className={headingClasses}>
+            Transform Your Writing with Advanced AI
+          </h1>
 
           <p className="mt-4 text-base sm:text-lg text-gray-200 mx-auto max-w-2xl">
-            Improve clarity, correct grammar, and refine your tone instantly with smart, context-aware suggestions.
+            Improve clarity, correct grammar, and refine your tone instantly
+            with smart, context-aware suggestions.
           </p>
 
           <div className="mt-8 card p-5">
@@ -50,12 +53,17 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 text-white" />
               </button>
 
-              <button className="btn-secondary" aria-label="Check Writing Style">
+              <button
+                className="btn-secondary"
+                aria-label="Check Writing Style"
+              >
                 Check Writing Style
               </button>
             </div>
 
-            <div className="mt-4 text-sm text-white/80">350k+ writers worldwide</div>
+            <div className="mt-4 text-sm text-white/80">
+              350k+ writers worldwide
+            </div>
           </div>
         </div>
       </div>

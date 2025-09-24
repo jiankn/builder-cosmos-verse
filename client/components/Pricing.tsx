@@ -84,22 +84,30 @@ export default function Pricing() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold" style={{ color: '#1f2937' }}>{p.name}</h3>
-                    <p className="mt-1 text-sm" style={{ color: '#6b7280' }}>
+                    <h3
+                      className="text-lg font-semibold"
+                      style={{ color: "#1f2937" }}
+                    >
+                      {p.name}
+                    </h3>
+                    <p className="mt-1 text-sm" style={{ color: "#6b7280" }}>
                       {p.desc}
                     </p>
                   </div>
                   <div className="text-right">
                     {isEnterprise ? (
-                      <div className="text-sm" style={{ color: '#6b7280' }}>
+                      <div className="text-sm" style={{ color: "#6b7280" }}>
                         Contact us
                       </div>
                     ) : (
                       <div>
-                        <div className="text-3xl font-extrabold" style={{ color: '#1f2937' }}>
+                        <div
+                          className="text-3xl font-extrabold"
+                          style={{ color: "#1f2937" }}
+                        >
                           {price === 0 ? "$0" : `$${price}`}
                         </div>
-                        <div className="text-sm" style={{ color: '#6b7280' }}>
+                        <div className="text-sm" style={{ color: "#6b7280" }}>
                           {price === 0
                             ? "/ forever"
                             : billing === "monthly"
@@ -119,7 +127,9 @@ export default function Pricing() {
                       >
                         <Check className="h-4 w-4" />
                       </span>
-                      <span className="text-sm" style={{ color: '#6b7280' }}>{f}</span>
+                      <span className="text-sm" style={{ color: "#6b7280" }}>
+                        {f}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -142,7 +152,7 @@ export default function Pricing() {
                   )}
                 </div>
 
-                <div className="mt-4 text-xs" style={{ color: '#6b7280' }}>
+                <div className="mt-4 text-xs" style={{ color: "#6b7280" }}>
                   No credit card required to start.
                 </div>
               </div>

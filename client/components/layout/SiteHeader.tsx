@@ -20,14 +20,19 @@ export default function SiteHeader() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-40 w-full bg-white ${scrolled ? "shadow-sm" : "shadow-sm"}`}>
+    <header
+      className={`sticky top-0 z-40 w-full bg-white ${scrolled ? "shadow-sm" : "shadow-sm"}`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-16">
           {/* Left: Logo */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-lg bg-[#1f2937]" />
-              <span className="text-lg font-extrabold tracking-tight" style={{ color: "#1f2937" }}>
+              <span
+                className="text-lg font-extrabold tracking-tight"
+                style={{ color: "#1f2937" }}
+              >
                 LumenText
               </span>
             </a>
@@ -50,8 +55,12 @@ export default function SiteHeader() {
           {/* Right: Actions */}
           <div className="flex justify-end items-center gap-3">
             <div className="hidden md:flex items-center gap-3">
-              <a href="#login" className="btn-secondary text-sm">Login</a>
-              <a href="#try" className="btn-primary text-sm">Try Free</a>
+              <a href="#login" className="btn-secondary text-sm">
+                Login
+              </a>
+              <a href="#try" className="btn-primary text-sm">
+                Try Free
+              </a>
             </div>
 
             <button
@@ -83,8 +92,20 @@ export default function SiteHeader() {
               ))}
 
               <div className="mt-2 flex gap-2">
-                <a href="#login" onClick={() => setOpen(false)} className="flex-1 btn-secondary text-sm text-center">Login</a>
-                <a href="#try" onClick={() => setOpen(false)} className="flex-1 btn-primary text-sm text-center">Try Free</a>
+                <a
+                  href="#login"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 btn-secondary text-sm text-center"
+                >
+                  Login
+                </a>
+                <a
+                  href="#try"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 btn-primary text-sm text-center"
+                >
+                  Try Free
+                </a>
               </div>
             </div>
           </div>
