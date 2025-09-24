@@ -12,6 +12,12 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
+    /* Hex color hooks for gradients */
+    --brand-start-hex: #6366f1;
+    --brand-end-hex: #8b5cf6;
+    --primary-hex: #8b5cf6;
+    --secondary-hex: #7c3aed;
+    --accent-hex: #a855f7;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
