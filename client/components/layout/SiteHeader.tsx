@@ -50,20 +50,8 @@ export default function SiteHeader() {
           {/* Right: Actions */}
           <div className="flex justify-end items-center gap-3">
             <div className="hidden md:flex items-center gap-3">
-              <a
-                href="#login"
-                className="rounded-md px-4 py-2 text-sm font-medium"
-                style={{ color: "#8b5cf6", border: "1.5px solid #8b5cf6" }}
-              >
-                Login
-              </a>
-              <a
-                href="#try"
-                className="inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-white"
-                style={{ backgroundColor: "#8b5cf6" }}
-              >
-                Try Free
-              </a>
+              <a href="#login" className="btn-secondary text-sm">Login</a>
+              <a href="#try" className="btn-primary text-sm">Try Free</a>
             </div>
 
             <button
