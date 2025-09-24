@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, Users } from "lucide-react";
 
 export default function Hero() {
